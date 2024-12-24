@@ -8,6 +8,10 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Close the menu
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-20 bg-gray-900">
       <div className="max-w-screen-xl mx-auto px-6 py-4">
@@ -71,28 +75,54 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-900 text-white flex flex-col items-center space-y-4 py-4">
+        <div className="md:hidden bg-gray-800 shadow-lg text-white flex flex-col items-center space-y-4 py-3 w-1/2 mx-auto rounded-lg ">
+          {/* Close Button (Cancel Icon) */}
+          <button
+            onClick={closeMenu}
+            className="self-end text-white text-3xl p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          {/* Mobile Links */}
           <Link
             to="/"
             className="hover:text-blue-200 transition duration-300"
+            onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             to="/about"
             className="hover:text-blue-200 transition duration-300"
+            onClick={closeMenu}
           >
             About
           </Link>
           <Link
             to="/projects"
             className="hover:text-blue-200 transition duration-300"
+            onClick={closeMenu}
           >
             Projects
           </Link>
           <Link
             to="/contact"
             className="hover:text-blue-200 transition duration-300"
+            onClick={closeMenu}
           >
             Contact
           </Link>
