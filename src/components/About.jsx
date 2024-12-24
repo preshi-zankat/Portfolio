@@ -24,7 +24,7 @@ const About = () => {
             <li>Collaborative problem-solving and teamwork</li>
           </ul>
         </div>
-
+ 
         <div className="bg-gray-800 rounded-lg p-6 shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-indigo-400">My Journey</h2>
           <p className="text-gray-300 leading-relaxed">
