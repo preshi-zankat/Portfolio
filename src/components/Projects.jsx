@@ -3,7 +3,7 @@ const Projects = () => {
       {
         title: 'Journal Website',
         description: 'A personal diary app to create, update, and delete journal entries.',
-        link: 'https://github.com/vishal-tiwari-1971/Mankevichar',
+        link: 'https://mankevichar.vercel.app/',
       },
       {
         title: 'Netflix Clone',
